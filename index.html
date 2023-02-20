@@ -1,7 +1,16 @@
 <html>
 
 <head>
-
+<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -32,11 +41,64 @@
 
 <p>Synergy allows you to play together in the Half-Life series of games<img src="kb/to_keep_order.gif"></p>
 <hr color="green">
-<p><img src="slider/1.jpg" width="500" height="500"></p>
-<hr color="green">
-<p><img src="slider/2.jpg" width="500" height="500"></p>
-<hr color="green">
-<p><img src="slider/3.jpg" width="500" height="500"></p>
+<style>
+    html,
+    body{
+      height: 100%;
+      font-size: 15px;
+    }
+    .swiper{
+      width: 545px;
+      height: 50%;
+    }
+    .swiper-slide{
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .swiper-slide img{
+      width: 58%;
+      object-fit: cover;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev{
+      right: 140px !important; 
+      left: auto;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next{
+      left: 140px !important; 
+      right: auto;
+    }
+
+  </style>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="slider/1.jpg"></div>
+      <div class="swiper-slide"><img src="slider/2.jpg"></div>
+      <div class="swiper-slide"><img src="slider/3.jpg"></div>
+      <div class="swiper-slide"><img src="slider/4.jpg
+        "></div>
+      <div class="swiper-slide"><img src="slider/5.jpg"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
 	<hr color="green">
 <p>Available games in co-op mode:</p>
 
